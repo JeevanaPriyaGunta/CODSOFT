@@ -21,28 +21,28 @@ def divide(x, y):
 # User input
 while True:
     print("Options:")
-    print("Enter '1' for addition")
-    print("Enter '2' for subtraction")
-    print("Enter '3' for multiplication")
-    print("Enter '4' for division")
-    print("Enter '5' to end the program")
+    print("Enter 'add' for addition")
+    print("Enter 'subtract' for subtraction")
+    print("Enter 'multiply' for multiplication")
+    print("Enter 'divide' for division")
+    print("Enter 'quit' to end the program")
 
     choice = input("Enter operation: ")
 
     if choice == "quit":
         break
 
-    if choice in ("1", "2", "3", "4"):
+    if choice in ("add", "subtract", "multiply", "divide"):
         num1 = int(input("Enter first number: "))
         num2 = int(input("Enter second number: "))
 
-        if choice == "1":
+        if choice == "add":
             print("Result: ", add(num1, num2))
-        elif choice == "2":
+        elif choice == "subtract":
             print("Result: ", subtract(num1, num2))
-        elif choice == "3":
+        elif choice == "multiply":
             print("Result: ", multiply(num1, num2))
-        elif choice == "4":
+        elif choice == "divide":
             result = divide(num1, num2)
             if isinstance(result, str):
                 print(result)
